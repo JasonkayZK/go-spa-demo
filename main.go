@@ -8,7 +8,6 @@ import (
 	_ "github.com/jasonkayzk/go-spa-demo/statik"
 	"github.com/labstack/echo"
 	"github.com/rakyll/statik/fs"
-	"gopkg.in/go-playground/validator.v8"
 )
 
 var e = echo.New()
@@ -34,11 +33,6 @@ type ErrorJSON struct {
 type todoController struct {
 	get  func(c echo.Context) error
 	post func(c echo.Context) error
-}
-
-// CustomValidator is used for validation, dah
-type CustomValidator struct {
-	validator *validator.Validate
 }
 
 func newTodoController() *todoController {
