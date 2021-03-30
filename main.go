@@ -20,7 +20,7 @@ type Todo struct {
 // Validate that he object is sufficient
 func (t *Todo) Validate() error {
 	if t.Description == "" {
-		return fmt.Errorf("Item is missing it's description")
+		return fmt.Errorf("item is missing it's description")
 	}
 	return nil
 }
@@ -37,7 +37,7 @@ type todoController struct {
 
 func newTodoController() *todoController {
 	todos := []*Todo{
-		&Todo{
+		{
 			Description: "Default todo",
 		},
 	}
