@@ -6,7 +6,7 @@ all:
 .ONESHELL:
 statik:
 	cd web && yarn && yarn build && cd ..
-	statik.exe -src=./web/build
+	statik -src=./web/build
 
 dev:
 	watcher -startcmd -cmd="go run main.go"
